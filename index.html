@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="">
+    <input type="text" name="số hạng 1" id="s1">
+    <input type="text" name="số hạng 2" id="s2"> <br><br>
+    <input id="t1" type="button" name="cộng" value="Addition(+)" onClick="add()">
+    <input id="t2" type='button' name="trừ" value="Subtraction(-)" onclick="sub()">
+    <input id="t3" type='button' name="nhân" value="Multiplication(X)" onclick="mult()">
+    <input id="t4" type='button' name="chia" value="division(/)" onclick="divi()">
+
+</form>
+<h3 id="h3"></h3>
+<script>
+    function add() {
+        var a = document.getElementById('s1').value;
+        var x=parseFloat(a)
+        var b = document.getElementById('s2').value;
+        var y=parseFloat(b)
+        var c = x + y
+        // document.write('kết quả :' + c)
+        //sẽ bị xuất sang trang khác
+        const p3=document.getElementById('h3').innerHTML='Result Addition '+ c
+    }
+    function sub() {
+        var a = document.getElementById('s1').value;
+        var x=parseFloat(a)
+        var b = document.getElementById('s2').value;
+        var y=parseFloat(b)
+        var c = x - y
+        // document.write('kết quả :' + c)
+        const p3=document.getElementById('h3').innerHTML='Subtraction(-) '+ c
+
+    }
+    function mult() {
+        var a = document.getElementById('s1').value;
+        var x=parseFloat(a)
+        var b = document.getElementById('s2').value;
+        var y=parseFloat(b)
+        var c = x*y
+        // document.write('kết quả :' + c)
+        const p3=document.getElementById('h3').innerHTML='Multiplication(X) '+ c
+
+    }
+    function divi() {
+        var a = document.getElementById('s1').value;
+        var x=parseFloat(a)
+        var b = document.getElementById('s2').value;
+        var y=parseFloat    (b)
+        var c = x/y
+        // document.write('kết quả :' + c)
+        const p3=document.getElementById('h3').innerHTML='Division(/) '+ c
+
+    }
+</script>
+
+</script>
+</body>
+</html>
